@@ -23,7 +23,7 @@ router.post('/testpost',(req,res) => {
       });
 })
 
-app.use('/.netlify/functions/server', router);  // path must route to lambda (express/server.js)
+app.use(`/api/`, router);
 
-module.exports = app;
-module.exports.handler = serverless(app);
+
+export const handler = serverlessHttp(app);

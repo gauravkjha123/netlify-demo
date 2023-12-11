@@ -1,8 +1,8 @@
 {
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "build": "netlify-lambda build src"
+    "start": "netlify dev functions/index.js",
+    "build": "netlify build src"
   },
   "dependencies": {
     "@netlify/functions": "^2.4.0",
